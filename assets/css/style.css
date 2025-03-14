@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #292929;
+}
+nav {
+    background-color: #D9D9D9;
+    height: 50px;
+
+}
+header{
+    height: 70vh;
+    background-image: url('../imgs/xbox.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: aliceblue;
+}
+.header-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25vh;
+    padding: 0 20px;
+}
+.header-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #D9D9D9;
+    opacity: 20%;
+    border-radius: 50%;
+    color: #292929;
+    font-size: x-large;
+    font-weight: 900;
+}
+header h2 {
+    margin-bottom: 0;
+}
+
+main {
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+    color: aliceblue;
+    font-weight: 900;
+    font-size:xx-large;
+}
+.header-container img {
+    padding-left: 45px;
+}
+
+main .card-wrapper {
+    border: black 1px solid; 
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.75);
+}
+
+.card-wrapper {
+    background-color: #D9D9D9;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-wrapper p {
+    width: 270px;
+    margin: 0 auto;
+
+}
+
+.img-container {
+    width: 270px;  
+    height: 270px; 
+    background-color: white;
+}
+
+.card-img {
+    width: 95%;
+    height: 100%;
+    object-fit: contain; 
+
+}
+
+hr {
+    border: none;
+    width: 100%;
+}
+hr {
+    border: 1.5px grey dashed;
+}
+
+button {
+    background-color: aliceblue;
+    border: none;
+    padding: .5rem;
+    border-radius: 12px;
+    margin: 1rem;
+    border: #292929 1px solid;
+}
+
+button:hover {
+    background-color: white;
+
+}
+.card-img {
+   border-top-left-radius: 12px;
+   border-top-right-radius: 12px;
+}
+footer {
+    background-color: #D9D9D9;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
