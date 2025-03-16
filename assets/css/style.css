@@ -113,6 +113,7 @@ main .card-wrapper, .vermas-btn {
 }
 
 .card-wrapper {
+    max-width: 250px;
     background-color: #d9d9d92a;
     padding: 10px;
     display: flex;
