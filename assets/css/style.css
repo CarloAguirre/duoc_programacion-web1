@@ -243,6 +243,19 @@ footer {
     border-radius: 10px;
 }
 
+.container-2 .box{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    width: calc(1200px - 30px);
+    height: calc(600px - 40px);
+    background: #d9d9d92a;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
 .container-3 .box {
     display: flex;
     width: calc(300px - 30px);
