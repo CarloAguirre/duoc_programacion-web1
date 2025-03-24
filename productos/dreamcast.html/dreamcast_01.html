@@ -3,68 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS: Se carga antes de tus estilos personalizados -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <title>RetroPlay</title>
   </head>
   <body>
-    <!-- menu principal -->
-    <nav>
-        <div class="nav-img"><img src="../../assets/imgs/logo.png" alt="logo"></div>
-        <div><a href="../../index.html">Inicio</a></div>
-        <div><a href="../../categorias/todas.html">Categorias</a></div>
-        <div><a href="../../productos/todos.html">Productos</a></div>
-        <div><a href="../../registro.html">Registro</a></div>
+    <!-- Menú principal con Bootstrap -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #D9D9D9; padding: 0 5%;">
+      <div class="container-fluid">
+        <a class="navbar-brand nav-img" href="#">
+          <img src="../../assets/imgs/logo.png" alt="logo" style="max-height: 45px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../categorias/todas.html">Categorias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../productos/todos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../registro.html">Registro</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
- 
     <div class="category-router">
       <a href="../../categorias/dreamcast.html">Dreamcast</a> / Sonic
-     </div>
-    <main>
-      <div class="container-2">
-        <div class="cont-img">
-          <img src="../../assets/imgs/sonic.png" class="cont-img">
-        </div>
-      </div>
-      <div class="container-3">
-        <div class="box">
-          <img src="../../assets/imgs/dreamcast.svg.png" class="cont-img">
-        </div>
-        <div class="box-2">
-          <h1 class="title-text">Consola Dreamcast</h1>
-          <p class="text-box-2">En Sonic Adventure, el erizo azul más veloz del mundo se embarca en una emocionante misión para detener al malvado Dr. Robotnik, quien busca desatar el poder de Chaos utilizando las Esmeraldas del Caos. Con seis personajes jugables, cada uno con su propia historia y mecánicas únicas, el juego combina acción en 3D, exploración de mundos abiertos y trepidantes niveles de velocidad. Su revolucionario sistema de físicas, animaciones detalladas y mecánicas de juego variadas marcaron un hito en la franquicia, convirtiéndolo en uno de los títulos más icónicos de Dreamcast.</p>
-          <div class="row">
-            <div class="column">
-            <ul class="list">
-            <li>Maze (Laberintos desafiantes)</li>
-            <li>Key (Llaves para abrir áreas)</li>
-            <li>Egg (Primer Easter Egg en videojuegos)</li>
-          </ul>
-          </div>
-          <div class="column">
-          <ul class="list">
-              <li>Drag (Dragones enemigos)</li>
-              <li>Swrd (Espada para defenderse)</li>
-              <li>Cave (Exploración en cuevas)</li>
-            </ul>
-          </div>  
-          <div style="text-align: end; color: aliceblue;">
-            <h2>Precio: $9.990</h2>
-          </div>
-          </div>
-        </div>
     </div>
-    <div class="container-4">
-      <div class="box">
-        <p class="text-buy">Comprar</p>
+
+    <main>
+      <div class="container-2 container">
+        <div class="cont-img">
+          <img src="../../assets/imgs/sonic.png" class="cont-img" alt="Sonic">
+        </div>
       </div>
-    </div> 
+      <div class="container-3 container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="box">
+              <img src="../../assets/imgs/dreamcast.svg.png" class="cont-img" alt="Dreamcast">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box-2">
+              <h1 class="title-text">Consola Dreamcast</h1>
+              <p class="text-box-2">
+                En Sonic Adventure, el erizo azul más veloz del mundo se embarca en una emocionante misión para detener al malvado Dr. Robotnik, quien busca desatar el poder de Chaos utilizando las Esmeraldas del Caos. Con seis personajes jugables, cada uno con su propia historia y mecánicas únicas, el juego combina acción en 3D, exploración de mundos abiertos y trepidantes niveles de velocidad. Su revolucionario sistema de físicas, animaciones detalladas y mecánicas de juego variadas marcaron un hito en la franquicia, convirtiéndolo en uno de los títulos más icónicos de Dreamcast.
+              </p>
+              <div class="row">
+                <div class="column col-6">
+                  <ul class="list">
+                    <li>Maze (Laberintos desafiantes)</li>
+                    <li>Key (Llaves para abrir áreas)</li>
+                    <li>Egg (Primer Easter Egg en videojuegos)</li>
+                  </ul>
+                </div>
+                <div class="column col-6">
+                  <ul class="list">
+                    <li>Drag (Dragones enemigos)</li>
+                    <li>Swrd (Espada para defenderse)</li>
+                    <li>Cave (Exploración en cuevas)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-end" style="color: aliceblue;">
+                <h2>Precio: $9.990</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container-4 container">
+        <div class="box">
+          <p class="text-buy">Comprar</p>
+        </div>
+      </div> -->
     </main>
-    <!-- Fin contenedor de las categorias -->
-    <!-- inicio footer -->
+
     <footer>
       <p>RetroPlay 2025</p>
     </footer>
-    <!-- fin footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
