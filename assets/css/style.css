@@ -89,6 +89,7 @@ main {
 .category-products__container {
     min-height: 67vh;
 }
+
 h1 {
     text-align: center;
     color: aliceblue !important;
@@ -120,7 +121,7 @@ nav div img {
 
 }
 
-main .card-wrapper, .vermas-btn {
+main .card-wrapper, .vermas-btn, .user-info__container {
     border: black 1px solid; 
     border-radius: 12px;
     -webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.75);
@@ -226,6 +227,19 @@ footer {
     margin: auto;
 }
 
+.producto-img__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    height: auto; /* O ajusta según necesites */
+    margin: auto;
+}
+.producto-img__wrapper img {
+    max-height: 60vh;
+}
+
 .container-3 {
     display: flex;
     justify-content: center;
@@ -256,6 +270,10 @@ footer {
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 10px;
+}
+.dinamic-product__wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .container-2 .box{

@@ -60,10 +60,10 @@ document.getElementById('form-user').addEventListener("submit", (event)=>{
 	const fechaIngresada = new Date (inputs.nacimiento.value)
 	let fechaActual = new Date()
 	let edad = fechaActual.getFullYear() - fechaIngresada.getFullYear()
-	const mesActual = fechaActual.getMonth();
-	const diaActual = fechaActual.getDate();
-	const mesNac = fechaIngresada.getMonth();
-	const diaNac = fechaIngresada.getDate();
+	const mesActual = fechaActual.getMonth()
+	const diaActual = fechaActual.getDate()
+	const mesNac = fechaIngresada.getMonth()
+	const diaNac = fechaIngresada.getDate()
 
 	if (mesActual < mesNac || (mesActual === mesNac && diaActual < diaNac)) {
 		edad -- 
@@ -76,7 +76,7 @@ document.getElementById('form-user').addEventListener("submit", (event)=>{
 	}
 })
 
-document.getElementById('boton-cancelar').addEventListener('click', ()=>{
+document.getElementById('boton-cancelar').addEventListener('click',()=>{
 	for(let input in inputs){
 		const divPadre = inputs[input].parentElement
 		let errorExistente = divPadre.querySelector('.error-msg')
