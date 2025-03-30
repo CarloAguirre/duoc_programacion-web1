@@ -1,3 +1,69 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo")) || JSON.parse(sessionStorage.getItem("usuarioActivo"))
+    const iconoCarrito = document.querySelector(".icon-cart")
+
+    if (usuarioActivo) {
+        iconoCarrito.style.display = "flex"
+    } else {
+        iconoCarrito.style.display = "none"
+    }
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector(".navbar-nav")
+
+    if (!nav) {
+        console.error("No se encontró el menú de navegación.")
+        return
+    }
+
+    const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo")) || JSON.parse(sessionStorage.getItem("usuarioActivo"))
+
+    if (usuarioActivo) {
+        ocultarLinks(["registro.html", "login.html"])
+        mostrarLinks(["perfil/perfil.html"]) 
+
+        const logoutItem = document.createElement("li")
+        logoutItem.classList.add("nav-item")
+        logoutItem.innerHTML = `<a class="nav-link text-danger" href="#" id="logout-btn">Cerrar Sesión</a>`
+        nav.appendChild(logoutItem)
+
+        document.getElementById("logout-btn").addEventListener("click", () => {
+            localStorage.clear()
+            sessionStorage.clear()
+            alert("Has cerrado sesión y se han eliminado todos los datos almacenados.")
+            location.reload()
+        })        
+        
+    } else {
+        mostrarLinks(["registro.html", "login.html"])
+        ocultarLinks(["perfil/perfil.html"])
+    }
+})
+
+function ocultarLinks(urls) {
+    document.querySelectorAll(".nav-item a").forEach(link => {
+        let linkHref = link.getAttribute("href").replace(/^(\.\/)+/, '') 
+        let match = urls.some(url => linkHref.endsWith(url.replace(/^(\.\/)+/, '')))
+
+        if (match) {
+            link.parentElement.style.display = "none"
+        }
+    })
+}
+
+function mostrarLinks(urls) {
+    document.querySelectorAll(".nav-item a").forEach(link => {
+        let linkHref = link.getAttribute("href").replace(/^(\.\/)+/, '') 
+        let match = urls.some(url => linkHref.endsWith(url.replace(/^(\.\/)+/, '')))
+
+        if (match) {
+            link.parentElement.style.display = "block"
+        }
+    })
+}
+
+
 const inputs = {
 	nombres : document.getElementById('input-nombres'),
 	apellidos : document.getElementById('input-apellidos'),
@@ -13,64 +79,85 @@ const inputs = {
 
 let errors = 0;
 
-document.getElementById('form-user').addEventListener("submit", (event)=>{
-	event.preventDefault()
-	errors = 0
-	for (let input in inputs) {
-		const divPadre = inputs[input].parentElement
-		let errorExistente = divPadre.querySelector('.error-msg')
-		if (errorExistente){
-			divPadre.removeChild(errorExistente)
-		}
-	}
-	for (let input in inputs) {
-		if (input !== "tipoDireccion" && inputs[input].value.trim().length <= 1){ 
-			mostrarError(inputs[input], `Introduzca un valor válido para ${inputs[input].name}`)
-		}
-		if (input === "email" && inputs[input].value.length >= 1) {
-			const esMail = inputs[input].value.split('@')
-			if (esMail.length < 2) {
-				mostrarError(inputs[input], "El formato del correo es incorrecto")
-			}
-		}
-	}
-	if (inputs.password.value !== inputs.repeatPassword.value) {
-		alert('Las contraseñas deben coincidir')
-		return
-	}
-	if (inputs.password.value.length < 6 || inputs.password.value.length > 18){
-		alert('La contraseña debe tener entre 6 y 18 caracteres')
-		return
-	}
-	if (!inputs.password.value.split('').some(char => !isNaN(char))){
-		alert('La contraseña debe tener al menos un número')
-		return
-	}
-	if (!inputs.password.value.split('').some(char => char !== char.toLowerCase())){
-		alert('La contraseña debe tener al menos una mayúscula')
-		return
-	}
-	const fechaIngresada = new Date(inputs.nacimiento.value)
-	let fechaActual = new Date()
-	let edad = fechaActual.getFullYear() - fechaIngresada.getFullYear()
-	const mesActual = fechaActual.getMonth()
-	const diaActual = fechaActual.getDate()
-	const mesNac = fechaIngresada.getMonth()
-	const diaNac = fechaIngresada.getDate()
+document.getElementById('form-user').addEventListener("submit", (event) => {
+    event.preventDefault();
+    let errors = 0;
 
-	if (mesActual < mesNac || (mesActual === mesNac && diaActual < diaNac)){
-		edad--
-	}
+    for (let input in inputs) {
+        const divPadre = inputs[input].parentElement;
+        let errorExistente = divPadre.querySelector('.error-msg');
+        if (errorExistente) {
+            divPadre.removeChild(errorExistente);
+        }
+    }
 
-	if (edad < 13){
-		alert('Debes tener al menos 13 años para registrarte')
-		return
-	}
-	if (errors == 0){
-		alert('Usuario creado con éxito!')
-		window.location.href = 'index.html'
-	}
-})
+    for (let input in inputs) {
+        if (input !== "tipoDireccion" && inputs[input].value.trim().length <= 1) {
+            mostrarError(inputs[input], `Introduzca un valor válido para ${inputs[input].name}`);
+        }
+        if (input === "email" && inputs[input].value.length >= 1) {
+            const esMail = inputs[input].value.split('@');
+            if (esMail.length < 2) {
+                mostrarError(inputs[input], "El formato del correo es incorrecto");
+            }
+        }
+    }
+
+    if (inputs.password.value !== inputs.repeatPassword.value) {
+        alert('Las contraseñas deben coincidir');
+        return;
+    }
+    if (inputs.password.value.length < 6 || inputs.password.value.length > 18) {
+        alert('La contraseña debe tener entre 6 y 18 caracteres');
+        return;
+    }
+    if (!inputs.password.value.split('').some(char => !isNaN(char))) {
+        alert('La contraseña debe tener al menos un número');
+        return;
+    }
+    if (!inputs.password.value.split('').some(char => char !== char.toLowerCase())) {
+        alert('La contraseña debe tener al menos una mayúscula');
+        return;
+    }
+
+    const fechaIngresada = new Date(inputs.nacimiento.value);
+    let fechaActual = new Date();
+    let edad = fechaActual.getFullYear() - fechaIngresada.getFullYear();
+    const mesActual = fechaActual.getMonth();
+    const diaActual = fechaActual.getDate();
+    const mesNac = fechaIngresada.getMonth();
+    const diaNac = fechaIngresada.getDate();
+
+    if (mesActual < mesNac || (mesActual === mesNac && diaActual < diaNac)) {
+        edad--;
+    }
+
+    if (edad < 13) {
+        alert('Debes tener al menos 13 años para registrarte');
+        return;
+    }
+
+    if (errors == 0) {
+        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        let nuevoUsuario = {
+            username: inputs.username.value.trim(),
+            email: inputs.email.value.trim(),
+            password: inputs.password.value.trim(),
+            nombre: inputs.nombres.value.trim(),
+            apellidos: inputs.apellidos.value.trim()
+        };
+
+        usuarios.push(nuevoUsuario);
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        alert('Usuario registrado con éxito!');
+        window.location.href = 'login.html'; // Redirigir al login después del registro
+    }
+});
+
+
+
 function mostrarError(input, mensaje){
 	const divPadre = input.parentElement
 	let errorMsg = document.createElement('p')
@@ -101,3 +188,5 @@ iconCart.addEventListener('click', () => {
 closeCart.addEventListener('click', () => {
 	body.classList.toggle('active');
 })
+
+
