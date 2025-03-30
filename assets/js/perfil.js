@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-	const contenedorProductos = document.querySelector(".container")
+	const contenedorProductos = document.querySelector(".user-products-container")
 	const productos = JSON.parse(localStorage.getItem("productos")) || []
 	if (productos.length === 0){
-	  contenedorProductos.innerHTML += "<p class='text-center mt-3'>No hay productos registrados.</p>"
 	  return;
 	}
   
