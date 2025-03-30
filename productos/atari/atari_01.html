@@ -5,103 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../assets/css/style.css" />
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../productos.css" />
-    <link rel="stylesheet" href="" />
-    <title>Document</title>
-=======
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>RetroPlay</title>
->>>>>>> e27628e70eec53af31bffb8c0f2b714502144b73
   </head>
   <body>
     <!-- menu principal -->
     <nav>
-<<<<<<< HEAD
-        <div class="nav-img"><img src="/assets/imgs/logo.png" alt="logo"></div>
-        <div><a href="index.html">Inicio</a></div>
-        <div><a href="./productos/todos.html">Productos</a></div>
-    </nav>
-    <h1>Producto 01</h1>
-    <!-- carusel de imagenes -->
-    <header style="background-image: url('../../assets/imgs/atari-consola.png'); background-size: contain;">
-        <div class="header-buttons">
-            <div class="header-btn"><</div>
-            <div class="header-btn">></div>
-        </div>
-    </header>
-
-    <h3 style="text-align: center;">Especificaciones</h3>
-    <!-- contenedor de las categorias -->
-    <section class="esp-section">   
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure sunt saepe rem pariatur quo. Aperiam, ex sequi corrupti vitae autem nemo quaerat, dolores quibusdam sunt voluptatibus non eveniet cum?. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque totam repellendus accusantium recusandae! Exercitationem, magni dolorum. Ullam, ipsam distinctio fugiat assumenda deleniti quos consequatur voluptates, voluptate repellendus modi dignissimos explicabo.</div>
-      <div class="ul-section">
-        <ul>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-        </ul>
-        <ul>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-          </ul>
+      <div class="nav-img">
+        <img src="../../assets/imgs/logo.png" alt="logo" />
       </div>
-      <button>Comprar</button>
-    </section>
-=======
-        <div class="nav-img"><img src="../../assets/imgs/logo.png" alt="logo"></div>
-        <div><a href="../../index.html">Inicio</a></div>
-        <div><a href="../../productos/todos.html">Productos</a></div>
-        <div><a href="../../registro.html">Registro</a></div>
+      <div><a href="../../index.html">Inicio</a></div>
+      <div><a href="../../categorias/todas.html">Categorias</a></div>
+      <div><a href="../../productos/todos.html">Productos</a></div>
+      <div><a href="../../registro.html">Registro</a></div>
+      <div class="icon-cart"><i class="ri-shopping-cart-line"></i>
+        <span class="cart-item-count"></span>
+        </div>
     </nav>
- 
-    <main >
+
+    <div class="cart">
+      <h2 class="cart-title">Carrito</h2>
+      <div class="cart-content">
+        <!-- <div class="cart-box">
+          <img src="../assets/imgs/Adventure_Atari.png" class="cart-img">
+          <div class="cart-detail">
+            <h2 class="cart-product-title">Adventure</h2>
+            <span class="cart-price">$24.990</span>
+            <div class="cart-quantity">
+              <button id="decrement">-</button>
+              <span class="number">1</span>
+              <button id="increment">+</button>
+            </div>
+          </div>
+          <i class="ri-delete-bin-6-fill cart-remove"></i>
+        </div> -->
+      </div>
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">$0</div>
+      </div>
+      <button class="btn-buy">Comprar</button>
+      <i class="ri-close-circle-fill" id="cart-close"></i>
+    </div>
+
+    <div class="category-router">
+     <a href="../../categorias/atari.html">Atari</a> / Adventurer
+    </div>
+    <main>
       <div class="container-2">
         <div class="cont-img">
-          <img src="../../assets/imgs/Adventure_Atari.png" class="cont-img">
+          <img src="../../assets/imgs/Adventure_Atari.png" class="cont-img" />
         </div>
       </div>
       <div class="container-3">
         <div class="box">
-          <img src="../../assets/imgs/atari.png" class="cont-img">
+          <img src="../../assets/imgs/atari.png" class="cont-img" />
         </div>
         <div class="box-2">
-          <h1 class="title-text">Consola Atari</h1>
-          <p class="text-box-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h1 class="title-text">Adventurer</h1>
+          <p class="text-box-2">
+            En Adventure, los jugadores exploran un vasto reino en busca del
+            cáliz encantado robado por un malvado mago. A través de laberintos
+            llenos de peligros, deben enfrentar dragones feroces, abrir puertas
+            con llaves ocultas y usar la icónica espada para defenderse. Con un
+            mundo interconectado y mecánicas innovadoras, Adventure es
+            considerado uno de los primeros videojuegos de acción y exploración,
+            pionero del género de aventuras. Su diseño abierto y la introducción
+            del primer "huevo de Pascua" en los videojuegos lo convirtieron en
+            un clásico atemporal.
+          </p>
           <div class="row">
             <div class="column">
-            <ul class="list">
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-          </ul>
-          </div>
-          <div class="column">
-          <ul class="list">
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-            </ul>
-          </div>  
+              <ul class="list">
+                <li>Maze (Laberintos desafiantes)</li>
+                <li>Key (Llaves para abrir áreas)</li>
+                <li>Egg (Primer Easter Egg en videojuegos)</li>
+              </ul>
+            </div>
+            <div class="column">
+              <ul class="list">
+                <li>Drag (Dragones enemigos)</li>
+                <li>Swrd (Espada para defenderse)</li>
+                <li>Cave (Exploración en cuevas)</li>
+              </ul>
+            </div>
+            <div style="text-align: end; color: aliceblue;">
+              <h2>Precio: $24.990</h2>
+            </div>
           </div>
         </div>
-    </div>
-    <div class="container-4">
-      <div class="box">
-        <p class="text-buy">Comprar</p>
       </div>
-    </div>
+      <div>
+        <div class="container-4">
+          <div class="box">
+            <p class="text-buy">Comprar</p>
+          </div>
+        </div>
+      </div>
     </main>
->>>>>>> e27628e70eec53af31bffb8c0f2b714502144b73
     <!-- Fin contenedor de las categorias -->
     <!-- inicio footer -->
     <footer>
       <p>RetroPlay 2025</p>
     </footer>
     <!-- fin footer -->
+    <script src="../../assets/js/cart.js"></script>
   </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> e27628e70eec53af31bffb8c0f2b714502144b73

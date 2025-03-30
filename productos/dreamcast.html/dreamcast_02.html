@@ -5,56 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../assets/css/style.css" />
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../productos.css" />
-    <link rel="stylesheet" href="" />
-    <title>Document</title>
-=======
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>RetroPlay</title>
->>>>>>> e27628e70eec53af31bffb8c0f2b714502144b73
   </head>
   <body>
     <!-- menu principal -->
     <nav>
-<<<<<<< HEAD
-        <div class="nav-img"><img src="/assets/imgs/logo.png" alt="logo"></div>
-        <div><a href="index.html">Inicio</a></div>
-        <div><a href="./productos/todos.html">Productos</a></div>
-    </nav>
-    <h1>Producto 02</h1>
-    <!-- carusel de imagenes -->
-    <header style="background-image: url('../../assets/imgs/joystick-negro.jpg'); background-size: contain;">
-        <div class="header-buttons">
-            <div class="header-btn"><</div>
-            <div class="header-btn">></div>
-        </div>
-    </header>
-
-    <h3 style="text-align: center;">Especificaciones</h3>
-    <!-- contenedor de las categorias -->
-    <section class="esp-section">   
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure sunt saepe rem pariatur quo. Aperiam, ex sequi corrupti vitae autem nemo quaerat, dolores quibusdam sunt voluptatibus non eveniet cum?. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque totam repellendus accusantium recusandae! Exercitationem, magni dolorum. Ullam, ipsam distinctio fugiat assumenda deleniti quos consequatur voluptates, voluptate repellendus modi dignissimos explicabo.</div>
-      <div class="ul-section">
-        <ul>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-        </ul>
-        <ul>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-          </ul>
-      </div>
-      <button>Comprar</button>
-    </section>
-=======
         <div class="nav-img"><img src="../../assets/imgs/logo.png" alt="logo"></div>
         <div><a href="../../index.html">Inicio</a></div>
+        <div><a href="../../categorias/todas.html">Categorias</a></div>
         <div><a href="../../productos/todos.html">Productos</a></div>
         <div><a href="../../registro.html">Registro</a></div>
-    </nav>
- 
+        <div class="icon-cart"><i class="ri-shopping-cart-line"></i>
+          <span class="cart-item-count"></span>
+          </div>
+      </nav>
+  
+      <div class="cart">
+        <h2 class="cart-title">Carrito</h2>
+        <div class="cart-content">
+          <!-- <div class="cart-box">
+            <img src="../assets/imgs/Adventure_Atari.png" class="cart-img">
+            <div class="cart-detail">
+              <h2 class="cart-product-title">Adventure</h2>
+              <span class="cart-price">$24.990</span>
+              <div class="cart-quantity">
+                <button id="decrement">-</button>
+                <span class="number">1</span>
+                <button id="increment">+</button>
+              </div>
+            </div>
+            <i class="ri-delete-bin-6-fill cart-remove"></i>
+          </div> -->
+        </div>
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+        <button class="btn-buy">Comprar</button>
+        <i class="ri-close-circle-fill" id="cart-close"></i>
+      </div>
+
+    <div class="category-router">
+      <a href="../../categorias/dreamcast.html">Dreamcast</a> / Lote Videojuegos
+     </div>
     <main>
       <div class="container-2">
         <div class="cont-img">
@@ -67,22 +61,26 @@
         </div>
         <div class="box-2">
           <h1 class="title-text">Lote Videojuegos</h1>
-          <p class="text-box-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="text-box-2">Este lote de videojuegos para Sega Dreamcast incluye algunos de los títulos más icónicos y representativos de la consola. Desde frenéticas carreras en patines y combates épicos, hasta aventuras llenas de misterio y exploración en vastos mundos. Cada juego ofrece una experiencia única, aprovechando el innovador hardware de la Dreamcast para ofrecer gráficos vibrantes, jugabilidad fluida y una inmersión incomparable. Ya sea que busques acción, estrategia o nostalgia, este set de juegos es una joya imprescindible para los coleccionistas y amantes del retro gaming.
+            </p>
           <div class="row">
             <div class="column">
             <ul class="list">
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
+            <li>Fast (Acción y velocidad)</li>
+            <li>RPG (Juego de rol en el set)</li>
+            <li>Jump (Plataformas y exploración)</li>
           </ul>
           </div>
           <div class="column">
           <ul class="list">
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
+              <li>Figh (Combates dinámicos)</li>
+              <li>Fly (Exploración aérea en Skies of Arcadia)</li>
+              <li>Tag (Graffiti y cultura urbana en Jet Grind Radio)</li>
             </ul>
-          </div>  
+          </div> 
+          <div style="text-align: end; color: aliceblue;">
+            <h2>Precio: $49.990</h2>
+          </div> 
           </div>
         </div>
     </div>
@@ -92,16 +90,12 @@
       </div>
     </div>   
     </main>
->>>>>>> e27628e70eec53af31bffb8c0f2b714502144b73
     <!-- Fin contenedor de las categorias -->
     <!-- inicio footer -->
     <footer>
       <p>RetroPlay 2025</p>
     </footer>
     <!-- fin footer -->
+    <script src="../../assets/js/cart.js"></script>
   </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> e27628e70eec53af31bffb8c0f2b714502144b73

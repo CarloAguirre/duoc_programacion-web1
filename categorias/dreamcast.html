@@ -5,16 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/css/normalize.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Categorías</title>
   </head>
   <body>
     <!-- menu principal -->
     <nav>
         <div class="nav-img"><img src="../assets/imgs/logo.png" alt="logo"></div>
         <div><a href="../index.html">Inicio</a></div>
+        <div><a href="../categorias/todas.html">Categorias</a></div>
         <div><a href="../productos/todos.html">Productos</a></div>
-    </nav>
+        <div><a href="../registro.html">Registro</a></div>
+        <div class="icon-cart"><i class="ri-shopping-cart-line"></i>
+          <span class="cart-item-count"></span>
+          </div>
+      </nav>
+  
+      <div class="cart">
+        <h2 class="cart-title">Carrito</h2>
+        <div class="cart-content">
+          <!-- <div class="cart-box">
+            <img src="../assets/imgs/Adventure_Atari.png" class="cart-img">
+            <div class="cart-detail">
+              <h2 class="cart-product-title">Adventure</h2>
+              <span class="cart-price">$24.990</span>
+              <div class="cart-quantity">
+                <button id="decrement">-</button>
+                <span class="number">1</span>
+                <button id="increment">+</button>
+              </div>
+            </div>
+            <i class="ri-delete-bin-6-fill cart-remove"></i>
+          </div> -->
+        </div>
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+        <button class="btn-buy">Comprar</button>
+        <i class="ri-close-circle-fill" id="cart-close"></i>
+      </div>
 
+    <div class="category-router">
+      <a href="../categorias/todas.html">Categorias</a> / DreamCast
+     </div>
     <h1>Productos DreamCast</h1>
 
   <main class="category-products__container">
@@ -23,7 +57,7 @@
         <div class="box">
             <div class="cont-img">
               <img 
-            src="../assets/imgs/dreamcast.png"
+            src="../assets/imgs/sonic.png"
             class="cont-img"
             />
             <div class="img-overlay">
@@ -58,5 +92,6 @@
       <p>RetroPlay 2025</p>
     </footer>
     <!-- fin footer -->
+    <script src="../assets/js/cart.js"></script>
   </body>
 </html>

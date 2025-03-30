@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>RetroPlay</title>
   </head>
   <body>
@@ -12,10 +13,42 @@
     <nav>
         <div class="nav-img"><img src="../../assets/imgs/logo.png" alt="logo"></div>
         <div><a href="../../index.html">Inicio</a></div>
+        <div><a href="../../categorias/todas.html">Categorias</a></div>
         <div><a href="../../productos/todos.html">Productos</a></div>
         <div><a href="../../registro.html">Registro</a></div>
-    </nav>
- 
+        <div class="icon-cart"><i class="ri-shopping-cart-line"></i>
+          <span class="cart-item-count"></span>
+          </div>
+      </nav>
+  
+      <div class="cart">
+        <h2 class="cart-title">Carrito</h2>
+        <div class="cart-content">
+          <!-- <div class="cart-box">
+            <img src="../assets/imgs/Adventure_Atari.png" class="cart-img">
+            <div class="cart-detail">
+              <h2 class="cart-product-title">Adventure</h2>
+              <span class="cart-price">$24.990</span>
+              <div class="cart-quantity">
+                <button id="decrement">-</button>
+                <span class="number">1</span>
+                <button id="increment">+</button>
+              </div>
+            </div>
+            <i class="ri-delete-bin-6-fill cart-remove"></i>
+          </div> -->
+        </div>
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+        <button class="btn-buy">Comprar</button>
+        <i class="ri-close-circle-fill" id="cart-close"></i>
+      </div>
+
+    <div class="category-router">
+      <a href="../../categorias/sega.html">Sega</a> / Sonic the Hedgehog
+     </div>
     <main>
       <div class="container-2">
         <div class="cont-img">
@@ -28,21 +61,24 @@
         </div>
         <div class="box-2">
           <h1 class="title-text">Sonic the Hedgehog</h1>
-          <p class="text-box-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="text-box-2">En Sonic the Hedgehog, el icónico erizo azul debe recorrer a toda velocidad los coloridos escenarios de South Island para detener al malvado Dr. Robotnik, quien busca capturar animales y convertirlos en robots para apoderarse de las Esmeraldas del Caos. Con una jugabilidad innovadora basada en la velocidad y plataformas, el juego presenta zonas llenas de obstáculos, loopings y enemigos mecánicos. Gracias a su fluidez, diseño de niveles y una banda sonora inolvidable, Sonic the Hedgehog se convirtió en un clásico atemporal y la insignia de Sega Genesis, dando inicio a una de las franquicias más exitosas de los videojuegos.</p>
           <div class="row">
             <div class="column">
             <ul class="list">
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
+            <li>Fast (Velocidad extrema)</li>
+            <li>Loop (Escenarios con loopings icónicos)</li>
+            <li>Jump (Salto con ataque giratorio)</li>
           </ul>
           </div>
           <div class="column">
           <ul class="list">
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
-              <li>Lorem Ipsum</li>
+              <li>Ring (Recolección de anillos)</li>
+              <li>Boss (Enfrentamientos contra Dr. Robotnik)</li>
+              <li>Zone (Diferentes mundos con mecánicas únicas)</li>
             </ul>
+          </div> 
+          <div style="text-align: end; color: aliceblue;">
+            <h2>Precio: $39.990</h2>
           </div>  
           </div>
         </div>
@@ -58,5 +94,6 @@
       <p>RetroPlay 2025</p>
     </footer>
     <!-- fin footer -->
+    <script src="../../assets/js/cart.js"></script>
   </body>
 </html>
