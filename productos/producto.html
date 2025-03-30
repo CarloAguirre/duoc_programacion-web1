@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>RetroPlay - Producto</title>
+</head>
+<body>
+    <!-- Menú principal -->
+    <nav>
+        <div class="nav-img"><img src="../../assets/imgs/logo.png" alt="logo"></div>
+        <div><a href="../../index.html">Inicio</a></div>
+        <div><a href="../../categorias/todas.html">Categorias</a></div>
+        <div><a href="../../productos/todos.html">Productos</a></div>
+        <div><a href="../../registro.html">Registro</a></div>
+    </nav>
+
+    <div class="category-router">
+        <a href="../perfil/perfil.html">Perfil</a> / <span id="producto-nombre"></span>
+    </div>
+    <div class="dinamic-product__wrapper">
+	
+			<div class="producto-img__wrapper">
+				<div class="cont-img">
+					<img id="producto-imagen" class="cont-img" src="" alt="Imagen del producto">
+				</div>
+			</div>
+
+        <div class="container-3" style="padding-left: 2rem;">
+            <div class="box">
+                <img src="../../assets/imgs/dreamcast.svg.png" class="cont-img">
+            </div>
+            <div class="box-2" style="min-width: 80vw !important;">
+                <h1 id="producto-nombre-header" class="title-text"></h1>
+                <p id="producto-descripcion" class="text-box-2"></p>
+                <div class="row">
+                    <div class="column">
+                        <ul id="caracteristicas-izquierda" class="list"></ul>
+                    </div>
+                    <div class="column">
+                        <ul id="caracteristicas-derecha" class="list"></ul>
+                    </div>  
+                </div>
+                <div style="text-align: end; color: aliceblue;">
+                    <h2>Precio: <span id="producto-precio"></span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-4" style="margin-top: 3rem;">
+            <div class="box">
+                <p class="text-buy">Comprar</p>
+            </div>
+        </div> 
+    </div>
+
+    <footer>
+        <p>RetroPlay 2025</p>
+    </footer>
+
+    <!-- Script para cargar la información del producto -->
+    <!-- <script src="../../assets/js/producto.js"></script> -->
+</body>
+</html>
