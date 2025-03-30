@@ -86,3 +86,15 @@ document.getElementById('boton-cancelar').addEventListener('click',()=>{
 	}
 	errors = 0
 })
+
+let iconCart =document.querySelector('.icon-cart');
+let closeCart =document.querySelector('.cerrar');
+let body = document.querySelector('body');
+
+iconCart.addEventListener('click', () => {
+	body.classList.toggle('showCart')
+})
+
+closeCart.addEventListener('click', () => {
+	body.classList.toggle('active')
+})
