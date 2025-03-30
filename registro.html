@@ -11,17 +11,40 @@
 </head>
 <body>
 
-<!-- 📌 Menú principal -->
-<nav>
-    <div class="nav-img"><img src="./assets/imgs/logo.png" alt="logo"></div>
-    <div><a href="index.html">Inicio</a></div>
-    <div><a href="./categorias/todas.html">Categorías</a></div>
-    <div><a href="./productos/todos.html">Productos</a></div>
-    <div><a href="registro.html">Registro</a></div>
-    <div><a href="./perfil/perfil.html">Perfil</a></div>
-</nav>
-
-<!-- 📌 Contenedor del formulario -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container" style="margin-bottom: -2rem;">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/imgs/logo.png" alt="logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./categorias/todas.html">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./productos/todos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./registro.html">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./perfil/perfil.html">Perfil</a></li>
+                </ul>
+                <div class="icon-cart ms-3">
+                    <i class="ri-shopping-cart-line"></i>
+                    <span class="cart-item-count"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="cart">
+        <h2 class="cart-title">Carrito</h2>
+        <div class="cart-content">
+        </div>
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+        <button class="btn-buy">Comprar</button>
+        <i class="ri-close-circle-fill" id="cart-close"></i>
+      </div>
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-lg-8 col-md-10">
@@ -44,8 +67,6 @@
                             <input type="text" class="form-control" id="input-usuario" placeholder="Usuario" required>
                         </div>
                     </div>
-
-                    <!-- 📌 Segunda fila -->
                     <div class="row">
                         <div class="col-md-6 col-lg-4 mb-3">
                             <label for="input-email" class="form-label">Correo electrónico</label>
@@ -60,8 +81,6 @@
                             <input type="password" class="form-control" id="input-repass" placeholder="Confirmar contraseña" required>
                         </div>
                     </div>
-
-                    <!-- 📌 Tercera fila -->
                     <div class="row">
                         <div class="col-md-6 col-lg-4 mb-3">
                             <label for="input-birthday" class="form-label">Fecha de nacimiento</label>
@@ -70,8 +89,6 @@
                     </div>
 
                     <hr>
-
-                    <!-- 📌 Dirección (Opcional) -->
                     <h5 class="mb-3">Dirección de despacho (Opcional)</h5>
                     <div class="row">
                         <div class="col-md-6 col-lg-4 mb-3">
@@ -87,8 +104,6 @@
                             <input type="text" class="form-control" id="input-tipo_direccion" placeholder="Casa/Depto/Block">
                         </div>
                     </div>
-
-                    <!-- 📌 Términos y botón -->
                     <div class="form-check mb-3">
                         <input type="checkbox" class="form-check-input" id="check-terminos" required>
                         <label class="form-check-label" for="check-terminos">Acepto los términos y condiciones</label>
@@ -110,14 +125,12 @@
     </div>
 </div>
 
-<!-- 📌 Footer -->
 <footer class="mt-4 text-center">
     <p>RetroPlay 2025</p>
 </footer>
-
-<!-- 📌 Scripts -->
 <script src="./assets/js/cart.js"></script>
 <script src="./assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

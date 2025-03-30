@@ -16,7 +16,7 @@ h3, p {
 	justify-content: center;
 	gap: 20px; 
 	margin: 0 auto; 
-	max-width: 1200px; 
+	/* max-width: 1200px;  */
   }
 
   .user-info {
@@ -29,23 +29,7 @@ h3, p {
 	border-radius: 10px;
 	border: 1px solid #ccc;
   }
-  .nav-link {
-	border-right: solid 1px black !important;
-	border-radius: 0 !important;
-	text-decoration: none !important;
-	color: black !important;
-	font-size: x-large;
-  }
 
-  .nav-link.active {
-	border-bottom: none !important;
-	color: #cb7a09 !important;
-	font-size: x-large;
-  }
-  .nav-tabs {
-	margin-bottom: 0 !important;
-	border-bottom: none !important;
-  }
   .first-info-row {
 	display: flex;
 	justify-content: space-between;
@@ -92,3 +76,4 @@ h3, p {
 	  margin-bottom: 2rem;
 	}
   }
+  

@@ -11,17 +11,29 @@
   </head>
   <body>
     <!-- menu principal -->
-    <nav>
-        <div class="nav-img"><img src="../assets/imgs/logo.png" alt="logo"></div>
-        <div><a href="../index.html">Inicio</a></div>
-        <div><a href="../categorias/todas.html">Categorias</a></div>
-        <div><a href="../productos/todos.html">Productos</a></div>
-        <div><a href="../registro.html">Registro</a></div>
-        <div><a href="../perfil/perfil.html">Perfil</a></div>
-        <div class="icon-cart"><i class="ri-shopping-cart-line"></i>
-          <span class="cart-item-count"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container" style="margin-bottom: -2rem;">
+        <a class="navbar-brand" href="../index.html">
+              <img src="../assets/imgs/logo.png" alt="logo" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../categorias/todas.html">Categorías</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../productos/todos.html">Productos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../registro.html">Registro</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../perfil/perfil.html">Perfil</a></li>
+              </ul>
+              <div class="icon-cart ms-3">
+                  <i class="ri-shopping-cart-line"></i>
+                  <span class="cart-item-count"></span>
+              </div>
           </div>
-      </nav>
+      </div>
+  </nav>
   
       <div class="cart">
         <h2 class="cart-title">Carrito</h2>
@@ -143,5 +155,7 @@
     </footer>
     <!-- fin footer -->
     <script src="../../duoc_programacion-web1/assets/js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/cart.js"></script>
   </body>
 </html>

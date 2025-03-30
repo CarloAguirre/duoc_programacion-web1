@@ -6,25 +6,8 @@ body{
     background-image: url('../imgs/pattern.png');
     position: relative;
 }
-nav {
-    background-color: #8a8585;
-    height: 60px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    gap: 50px;
-    font: 700;
-    font-size: 20px;
-    color:#161616;
-    padding: 0 5%;
-}
+
 @media (max-width: 700px){
-   nav{
-    flex-direction: column;
-    height: fit-content;
-    padding: 15px 0;
-   }
    header {
     height: 35vh !important;
    }
@@ -32,21 +15,18 @@ nav {
     margin-bottom: 0 !important;
    }
 }
-nav div a {
-    color:#292929;
-    text-decoration: none;
+
+.navbar {
+    padding-bottom: -5rem !important;
+    margin-bottom: 0 !important;
 }
 header{
     height: 70vh;
-    background-image: url('../imgs/xbox.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+}
+.ul-container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    color: aliceblue;
+    flex-direction: row ;
 }
 .header-text {
     display: flex;
@@ -111,16 +91,8 @@ h4 {
 .header-container img {
     padding-left: 45px;
 }
-.nav-img {
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-nav div img {
-    max-height: 45px;
 
-}
+
 
 main .card-wrapper, .vermas-btn, .user-info__container {
     border: black 1px solid; 
@@ -206,8 +178,9 @@ button:hover {
    border-top-right-radius: 12px;
 }
 footer {
-    background-color: #D9D9D9;
+    background-color: #212529;
     text-align: center;
+    color: aliceblue;
     height: 50px;
     line-height: 50px;
 }
@@ -319,11 +292,14 @@ footer {
    .container-3 {
     flex-direction: column;
    }
+   .ul-container {
+       flex-direction: column;
+       align-items: center;
+   }
 }
 .container {
     text-align: center;
 }
-
 
 .container-4 {
     display: flex;
@@ -421,7 +397,15 @@ footer {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.25em;
 }
-
+.text-buy__wrapper{
+    padding: .5rem;
+    background-color: #084f8a;
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .list {
     color:#ffffff;
     margin: 0;
@@ -649,7 +633,7 @@ nav .icon-cart{
 .btn-buy {
     display: block;
     padding: 10px 30px;
-    background-color: #084f8a;
+    background-color: #084f8a !important;
     border: none;
     border-radius: 6px;
     font-size: 16px;
