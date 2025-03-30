@@ -5,13 +5,18 @@ const cartClose = document.querySelector("#cart-close");
 cartIcon.addEventListener("click", () => cart.classList.add("active"));
 cartClose.addEventListener("click", () => cart.classList.remove("active"));
 
-const addCartButtons = document.querySelectorAll(".addCart");
-addCartButtons.forEach(button => {
-	button.addEventListener("click", event => {
-		const productBox = event.target.closest(".product-box")
-		addToCart(productBox);
-	});
-});
+const productContainer =document.querySelector('.container');
+
+if (productContainer){
+  productContainer.addEventListener('click', (event) =>{
+    if (event.target.classList.contains('addCart')) {
+      const productBox = event.target.closest('.product-box')
+      if (productBox){
+        addToCart(productBox)
+      }
+    }
+  });
+}
 
 const cartContent = document.querySelector(".cart-content");
 const addToCart = productBox => {
