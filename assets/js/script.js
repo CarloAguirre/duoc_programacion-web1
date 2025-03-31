@@ -84,11 +84,13 @@ document.getElementById('form-user').addEventListener("submit", (event) => {
     for (let input in inputs) {
         if (input !== "tipoDireccion" && inputs[input].value.trim().length <= 1) {
             mostrarError(inputs[input], `Introduzca un valor válido para ${inputs[input].name}`);
+            return;
         }
         if (input === "email" && inputs[input].value.length >= 1) {
             const esMail = inputs[input].value.split('@');
             if (esMail.length < 2) {
                 mostrarError(inputs[input], "El formato del correo es incorrecto");
+                return;
             }
         }
     }
