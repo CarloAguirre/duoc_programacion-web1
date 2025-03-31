@@ -21,6 +21,20 @@ document.addEventListener("DOMContentLoaded", function () {
 		</div>
 	  `
 	  contenedorProductos.innerHTML += productoHTML
-	});
-  });
+	})
+  })
   
+  document.addEventListener("DOMContentLoaded", () => {
+    const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo")) || JSON.parse(sessionStorage.getItem("usuarioActivo"))
+
+    const nombreElemento = document.querySelector(".user-info:nth-of-type(1) p")
+    const emailElemento = document.querySelector(".user-info:nth-of-type(2) p")
+
+    if (usuarioActivo) {
+        nombreElemento.textContent = usuarioActivo.nombre || "Usuario Desconocido"
+        emailElemento.textContent = usuarioActivo.email || "Email no registrado"
+    } else {
+        alert("No has iniciado sesión. Serás redirigido al inicio.")
+        window.location.href = "../index.html"
+    }
+})
