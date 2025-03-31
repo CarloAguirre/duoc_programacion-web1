@@ -142,7 +142,7 @@ document.getElementById('form-user').addEventListener("submit", (event) => {
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
         alert('Usuario registrado con éxito!');
-        window.location.href = 'login.html'; // Redirigir al login después del registro
+        window.location.href = 'login.html'; 
     }
 });
 
