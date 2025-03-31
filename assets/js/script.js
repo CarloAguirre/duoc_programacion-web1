@@ -1,13 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo")) || JSON.parse(sessionStorage.getItem("usuarioActivo"))
-    const iconoCarrito = document.querySelector(".icon-cart")
-
-    if (usuarioActivo) {
-        iconoCarrito.style.display = "flex"
-    } else {
-        iconoCarrito.style.display = "none"
-    }
-})
 
 document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".navbar-nav")
