@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded",()=> {
 	const contenedorProductos = document.querySelector(".user-products-container")
 	const productos = JSON.parse(localStorage.getItem("productos")) || []
 	if (productos.length === 0){

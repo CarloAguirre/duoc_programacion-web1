@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const productTitle = productBox.querySelector(".name").textContent
         const productPrice = productBox.querySelector(".price").textContent
 
-        // Evitar duplicados
         if (cartItems.some(item => item.title === productTitle)) {
             alert("El producto ya está en el carrito.")
             return

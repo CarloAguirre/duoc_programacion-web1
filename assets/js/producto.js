@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     
     const imagenElemento = document.getElementById("producto-imagen")
     if (imagenElemento) {
-        imagenElemento.src = producto.imagen ? producto.imagen : null
+        imagenElemento.src = producto.imagen ? producto.imagen : 'Imagen no disponible'
     }
     document.getElementById("producto-descripcion").textContent = producto.descripcion
 

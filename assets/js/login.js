@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded",()=>{
     const loginButton = document.querySelector(".btn-info.text-white.w-100"); 
     const usernameInput = document.querySelector(".input-group.mt-4 input"); 
     const passwordInput = document.querySelector(".input-group.mt-1 input"); 

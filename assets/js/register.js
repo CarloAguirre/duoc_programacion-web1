@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 		document.getElementById('form-user').reset()
   
 		alert("Producto guardado correctamente.")
+		window.location.href = './perfil.html';
 	  };
   
 	  reader.onerror = function(){
